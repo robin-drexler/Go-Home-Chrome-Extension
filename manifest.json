@@ -7,18 +7,26 @@
         "128": "/img/icons/icon_128.png" 
     },
 
+    "browser_action": {
+        "default_icon": "/img/icons/icon_48.png", 
+        "default_title": "Home"
+    },
+    "background_page": "/html/background.html",
+
     "description": "Yay, I'm so useless.",
     "permissions": [
-        "geolocation"
+        "tabs",
+        "contextMenus"
     ],
 
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
             "js": [
-                    "/js/external/jquery.js", 
-                    "/js/content_script.js"
-                ]
+                "/js/external/jquery.js",
+                "/js/external/hotkeys.js",
+                "/js/content_script.js"
+            ]
         }
     ]
 }

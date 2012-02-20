@@ -1,3 +1,5 @@
 $(function() {
-    alert('Yay, I\'m an extension :)');
+    $(document).bind('keydown', 'alt+shift+h', function() {
+        alert('pressed');
+    });
 });
