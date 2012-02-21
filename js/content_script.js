@@ -1,5 +1,9 @@
-$(function() {
-    $(document).bind('keydown', 'alt+shift+h', function() {
-        alert('pressed');
-    });
+$(function () {
+
+    function sendRequest() {
+        chrome.extension.sendRequest({});
+    }
+
+    $(document).bind('keydown', 'ctrl+shift+h', sendRequest)
+        .bind('keydown', 'meta+shift+h', sendRequest);
 });

@@ -11,9 +11,14 @@ function updateTabWithUrl(tab) {
 }
 
 chrome.browserAction.onClicked.addListener(updateTabWithUrl);
+chrome.extension.onRequest.addListener(
+    function(request, sender, sendResponse) {
+        updateTabWithUrl(sender.tab);
+    });
 chrome.contextMenus.create({
     title: 'Go Home',
     onclick: function(_, tab) {
         updateTabWithUrl(tab);
     }
 })
+
