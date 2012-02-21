@@ -1,23 +1,25 @@
 {
-    "name": "My awesome extension :)",
+    "name": "Go Home",
     "version": "0.1",
-    "icons": { 
+    "description": "Go to the homepage of any website.",
+
+    "icons": {
         "16": "/img/icons/icon_16.png",
         "48": "/img/icons/icon_48.png",
-        "128": "/img/icons/icon_128.png" 
+        "128": "/img/icons/icon_128.png"
     },
 
-    "browser_action": {
-        "default_icon": "/img/icons/icon_48.png", 
-        "default_title": "Home"
-    },
-    "background_page": "/html/background.html",
-
-    "description": "Yay, I'm so useless.",
     "permissions": [
         "tabs",
         "contextMenus"
     ],
+
+    "browser_action": {
+        "default_icon": "/img/icons/icon_48.png",
+        "default_title": "Go Home"
+    },
+
+    "background_page": "/html/background.html",
 
     "content_scripts": [
         {
